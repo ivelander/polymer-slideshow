@@ -1,0 +1,21 @@
+{
+  "name": "polymer-slideshow",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ivelander/polymer-slideshow",
+  "authors": [
+    "ivelander@gmail.com"
+  ],
+  "description": "A polymer element modeled after the stack (http://mbostock.github.com/stack/) presentation library",
+  "keywords": [
+    "polymer",
+    "slideshow"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.2.0",
+    "platform": "Polymer/platform#~0.2.0"
+  }
+}

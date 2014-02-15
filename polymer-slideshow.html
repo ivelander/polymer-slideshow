@@ -1,0 +1,41 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<polymer-element name="polymer-slideshow" attributes="">
+	
+  <template>
+	  <link rel="stylesheet" href="polymer-slideshow.css">
+
+    <content select="section"></content>
+    <div on-keypress="{{ handleNext }}"></div>
+
+  </template>
+
+  <script>
+		Polymer('polymer-slideshow', {
+      ready: function() {
+
+        for (var i = 0; i < this.impl.children.length; i++) {
+          if(this.impl.children[i].tagName == 'SECTION'){
+            this.slides.push(this.impl.children[i])
+          }
+        }
+
+        this.slides[this.activeIndex].className = 'active';
+
+      },
+
+      handleNext: function(e){
+        console.log(e);
+
+        this.slides[activeIndex].className = '';
+        this.activeIndex ++;
+
+        this.slides[activeIndex].className = 'active';
+      },
+
+      slides: [],
+
+      activeIndex: 0
+    });
+  </script>
+</polymer-element>
